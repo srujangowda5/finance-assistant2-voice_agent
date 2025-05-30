@@ -1,6 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import FileResponse
-import whisper
+#import whisper
 from gtts import gTTS
 import requests
 from fastapi import Form
