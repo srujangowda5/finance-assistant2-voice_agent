@@ -23,7 +23,7 @@ def root():
 def speak_text(summary: str = Form(...)):
     try:
         filename = f"response_{uuid.uuid4()}.mp3"
-        tts = gTTS(text=summary)
+        tts = gTTS(text=summary, lang='en', tld='co.in')  # Try 'com.au', 'co.in', 'ca'
         tts.save(filename)
         return FileResponse(filename, media_type="audio/mpeg", filename="response.mp3")
     except Exception as e:
